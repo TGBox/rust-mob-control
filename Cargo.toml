@@ -7,9 +7,14 @@ edition = "2024"
 bevy = "0.15"
 rand = "0.8"
 
-# Enable a small amount of optimization in debug mode for smooth ECS crowd simulation
+# Keep debug = 0 to prevent 4GB+ PDB files on Windows MSVC, save disk space, and link fast
 [profile.dev]
 opt-level = 1
+debug = 0
 
 [profile.dev.package."*"]
 opt-level = 3
+
+[profile.release]
+opt-level = 3
+lto = "thin"

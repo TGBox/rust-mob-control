@@ -8,6 +8,7 @@ pub struct GateConfig {
     pub position: Vec3,
 }
 
+#[allow(dead_code)]
 pub struct LevelDefinition {
     pub base_hp: f32,
     pub spawn_interval: f32,

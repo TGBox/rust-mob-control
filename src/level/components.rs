@@ -9,6 +9,7 @@ pub struct EnemyBase {
     pub max_hp: f32,
 }
 
+#[allow(dead_code)]
 #[derive(Component)]
 pub struct EnemySpawner {
     pub spawn_timer: Timer,

@@ -57,6 +57,24 @@ pub fn setup_level(
         Transform::from_xyz(0.0, 0.0, 0.0),
     ));
 
+    // Center lane dashed markings
+    let stripe_mesh = meshes.add(Plane3d::default().mesh().size(0.28, 2.2));
+    let stripe_mat = materials.add(StandardMaterial {
+        base_color: COLOR_FLOOR_ACCENT,
+        perceptual_roughness: 0.5,
+        ..default()
+    });
+
+    for i in -5..=5 {
+        let z = i as f32 * 4.0;
+        commands.spawn((
+            LevelEnvironment,
+            Mesh3d(stripe_mesh.clone()),
+            MeshMaterial3d(stripe_mat.clone()),
+            Transform::from_xyz(0.0, 0.01, z),
+        ));
+    }
+
     // 2. Side Walls / Rails
     let wall_mesh = meshes.add(Cuboid::new(0.6, 0.9, LANE_LENGTH));
     let wall_mat = materials.add(StandardMaterial {

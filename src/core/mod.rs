@@ -3,6 +3,7 @@ pub mod game_state;
 pub mod spatial_hash;
 
 use bevy::prelude::*;
+#[allow(unused_imports)]
 pub use constants::*;
 pub use game_state::*;
 pub use spatial_hash::*;

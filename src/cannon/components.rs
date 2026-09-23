@@ -22,6 +22,7 @@ pub struct CannonBarrel {
     pub offset_x: f32,
 }
 
+#[allow(dead_code)]
 #[derive(Event)]
 pub struct SpawnMobEvent {
     pub position: Vec3,

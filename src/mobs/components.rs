@@ -1,5 +1,6 @@
 use bevy::prelude::*;
 
+#[allow(dead_code)]
 #[derive(Component, Debug, Clone)]
 pub struct Mob {
     pub is_player: bool,
