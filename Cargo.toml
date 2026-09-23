@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-bevy = "0.15"
+bevy = { version = "0.15", features = ["wav"] }
 rand = "0.8"
 
 # Keep debug = 0 to prevent 4GB+ PDB files on Windows MSVC, save disk space, and link fast
